@@ -13,6 +13,8 @@ def check_pid(pid):
         pid = pid.upper()
     elif pid.isnumeric():
         pid = "A" + pid - 1
+    elif pid.isalnum():
+        pid = pid[0].upper() + pid[1]
     # print(pid)
     return pid
 
@@ -23,7 +25,6 @@ def save_tc(cid, pid, tc):
     # make a dir for that problem
     if not os.path.exists(pth):
         os.mkdir(pth)
-
 
     # save all TCs in sep files
     n = len(tc)
