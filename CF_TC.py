@@ -39,13 +39,7 @@ class CF_TC:
                 self.driver.find_element(By.XPATH, '//*[@id="frameProblemIndex"]')
             )
 
-            # if problem_index is a alphanum
-            if problem_index.isalnum():
-                select.select_by_index(
-                    ord(problem_index[0]) - ord("A") +  int(problem_index[1])
-                )
-            else:
-                select.select_by_index(ord(problem_index) - ord("A") + 1)
+            select.select_by_index(ord(problem_index) - ord("A") + 1)
 
         else:
             return (None, "Error while filtering problem index")

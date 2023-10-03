@@ -1,4 +1,2 @@
 Requests==2.31.0
 selenium==4.13.0
-rich
-
